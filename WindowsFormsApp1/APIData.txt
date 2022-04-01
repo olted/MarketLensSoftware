@@ -1,0 +1,59 @@
+﻿{
+    "Meta Data": {
+        "1. Information": "Daily Prices (open, high, low, close) and Volumes",
+        "2. Symbol": "MSFT",
+        "3. Last Refreshed": "2022-02-04",
+        "4. Output Size": "Compact",
+        "5. Time Zone": "US/Eastern"
+    },
+    "Time Series (Daily)": {
+        "2022-02-04": {
+            "1. open": "300.2100",
+            "2. high": "308.8000",
+            "3. low": "299.9700",
+            "4. close": "305.9400",
+            "5. volume": "35096488"
+        },
+        "2022-02-03": {
+            "1. open": "309.4900",
+            "2. high": "311.2300",
+            "3. low": "299.9600",
+            "4. close": "301.2500",
+            "5. volume": "43729972"
+        },
+
+
+
+         /*using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionStringHelper.ConnectionStringValue("CSProjDB")))
+            {
+                connection.ExecuteAsync(new CommandDefinition("CREATE TABLE EXPERIMENT2 (column1 int);"));
+                
+               // connection.ExecuteAsync(new CommandDefinition($"IF OBJECT_ID('model.dbo.{Symbol}') IS NULL BEGIN CREATE TABLE model.dbo.{ Symbol }(OpenPrice float, ClosePrice float, LowPrice float, HighPrice float, Volume float); END;"));
+//connection.ExecuteAsync(new CommandDefinition($"INSERT INTO {Symbol} VALUES (OpenPrice, ClosePrice, LowPrice, HighPrice, Daily);"));                                                                                                                                          
+
+
+                /* connection.ExecuteAsync(new CommandDefinition($"CREATE TABLE {Symbol} (OpenPrice string,ClosePrice string,LowPrice string,HighPrice string,Daily string);  "));
+                   foreach (datapoint in APIoutput)  <--- figure this out
+                   {
+                       connection.ExecuteAsync(new CommandDefinition($"INSERT INTO {Symbol} VALUES (OpenPrice, ClosePrice, LowPrice, HighPrice, Daily);"));
+                   }*/
+        //    }
+
+
+         using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(@"Data Source=LAPTOP-JNTUCIQD;Initial Catalog=model;Integrated Security=True"))
+            {
+                connection.ExecuteAsync(new CommandDefinition("CREATE TABLE Person2 (column1 int);"));
+
+            }
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection("Data Source=LAPTOP-JNTUCIQD;Initial Catalog=model;Integrated Security=True"))
+            {
+                connection.ExecuteAsync(new CommandDefinition("CREATE TABLE laptop-jntuciqd.model.dbo.Person (column1 int);"));
+                
+            }
+
+
+
+
+
+
+

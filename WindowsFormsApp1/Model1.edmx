@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CSProjDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CSProjDB.dbo.GOOGL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="GOOGL">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Open" />
+            <PropertyRef Name="High" />
+            <PropertyRef Name="Low" />
+            <PropertyRef Name="Close" />
+            <PropertyRef Name="Adj_Close" />
+            <PropertyRef Name="Volume" />
+          </Key>
+          <Property Name="Date" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Open" Type="float" Nullable="false" />
+          <Property Name="High" Type="float" Nullable="false" />
+          <Property Name="Low" Type="float" Nullable="false" />
+          <Property Name="Close" Type="float" Nullable="false" />
+          <Property Name="Adj_Close" Type="float" Nullable="false" />
+          <Property Name="Volume" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CSProjDB.dbo.MSFT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSFT">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Open" />
+            <PropertyRef Name="High" />
+            <PropertyRef Name="Low" />
+            <PropertyRef Name="Close" />
+            <PropertyRef Name="Adj_Close" />
+            <PropertyRef Name="Volume" />
+          </Key>
+          <Property Name="Date" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Open" Type="float" Nullable="false" />
+          <Property Name="High" Type="float" Nullable="false" />
+          <Property Name="Low" Type="float" Nullable="false" />
+          <Property Name="Close" Type="float" Nullable="false" />
+          <Property Name="Adj_Close" Type="float" Nullable="false" />
+          <Property Name="Volume" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CSProjDB.dbo.NVDA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="NVDA">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Open" />
+            <PropertyRef Name="High" />
+            <PropertyRef Name="Low" />
+            <PropertyRef Name="Close" />
+            <PropertyRef Name="Adj_Close" />
+            <PropertyRef Name="Volume" />
+          </Key>
+          <Property Name="Date" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Open" Type="float" Nullable="false" />
+          <Property Name="High" Type="float" Nullable="false" />
+          <Property Name="Low" Type="float" Nullable="false" />
+          <Property Name="Close" Type="float" Nullable="false" />
+          <Property Name="Adj_Close" Type="float" Nullable="false" />
+          <Property Name="Volume" Type="int" Nullable="false" />
+        </EntityType>
+        <Function Name="GetDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="CSProjDBModelStoreContainer">
+          <EntitySet Name="GOOGL" EntityType="Self.GOOGL" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [GOOGL].[Date] AS [Date], 
+    [GOOGL].[Open] AS [Open], 
+    [GOOGL].[High] AS [High], 
+    [GOOGL].[Low] AS [Low], 
+    [GOOGL].[Close] AS [Close], 
+    [GOOGL].[Adj_Close] AS [Adj_Close], 
+    [GOOGL].[Volume] AS [Volume]
+    FROM [dbo].[GOOGL] AS [GOOGL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MSFT" EntityType="Self.MSFT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSFT].[Date] AS [Date], 
+    [MSFT].[Open] AS [Open], 
+    [MSFT].[High] AS [High], 
+    [MSFT].[Low] AS [Low], 
+    [MSFT].[Close] AS [Close], 
+    [MSFT].[Adj_Close] AS [Adj_Close], 
+    [MSFT].[Volume] AS [Volume]
+    FROM [dbo].[MSFT] AS [MSFT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="NVDA" EntityType="Self.NVDA" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [NVDA].[Date] AS [Date], 
+    [NVDA].[Open] AS [Open], 
+    [NVDA].[High] AS [High], 
+    [NVDA].[Low] AS [Low], 
+    [NVDA].[Close] AS [Close], 
+    [NVDA].[Adj_Close] AS [Adj_Close], 
+    [NVDA].[Volume] AS [Volume]
+    FROM [dbo].[NVDA] AS [NVDA]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CSProjDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GOOGL">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Open" />
+            <PropertyRef Name="High" />
+            <PropertyRef Name="Low" />
+            <PropertyRef Name="Close" />
+            <PropertyRef Name="Adj_Close" />
+            <PropertyRef Name="Volume" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Open" Type="Double" Nullable="false" />
+          <Property Name="High" Type="Double" Nullable="false" />
+          <Property Name="Low" Type="Double" Nullable="false" />
+          <Property Name="Close" Type="Double" Nullable="false" />
+          <Property Name="Adj_Close" Type="Double" Nullable="false" />
+          <Property Name="Volume" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MSFT">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Open" />
+            <PropertyRef Name="High" />
+            <PropertyRef Name="Low" />
+            <PropertyRef Name="Close" />
+            <PropertyRef Name="Adj_Close" />
+            <PropertyRef Name="Volume" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Open" Type="Double" Nullable="false" />
+          <Property Name="High" Type="Double" Nullable="false" />
+          <Property Name="Low" Type="Double" Nullable="false" />
+          <Property Name="Close" Type="Double" Nullable="false" />
+          <Property Name="Adj_Close" Type="Double" Nullable="false" />
+          <Property Name="Volume" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NVDA">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Open" />
+            <PropertyRef Name="High" />
+            <PropertyRef Name="Low" />
+            <PropertyRef Name="Close" />
+            <PropertyRef Name="Adj_Close" />
+            <PropertyRef Name="Volume" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Open" Type="Double" Nullable="false" />
+          <Property Name="High" Type="Double" Nullable="false" />
+          <Property Name="Low" Type="Double" Nullable="false" />
+          <Property Name="Close" Type="Double" Nullable="false" />
+          <Property Name="Adj_Close" Type="Double" Nullable="false" />
+          <Property Name="Volume" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CSProjDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GOOGLs" EntityType="Self.GOOGL" />
+          <EntitySet Name="MSFTs" EntityType="Self.MSFT" />
+          <EntitySet Name="NVDAs" EntityType="Self.NVDA" />
+          <FunctionImport Name="GetDate" ReturnType="Collection(CSProjDBModel.GetDate_Result)" />
+        </EntityContainer>
+        <ComplexType Name="GetDate_Result">
+          <Property Type="Int32" Name="Year" Nullable="true" />
+          <Property Type="Int32" Name="Month" Nullable="true" />
+          <Property Type="Int32" Name="Day" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CSProjDBModelStoreContainer" CdmEntityContainer="CSProjDBEntities">
+          <EntitySetMapping Name="GOOGLs">
+            <EntityTypeMapping TypeName="CSProjDBModel.GOOGL">
+              <MappingFragment StoreEntitySet="GOOGL">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="Adj_Close" ColumnName="Adj_Close" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSFTs">
+            <EntityTypeMapping TypeName="CSProjDBModel.MSFT">
+              <MappingFragment StoreEntitySet="MSFT">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="Adj_Close" ColumnName="Adj_Close" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NVDAs">
+            <EntityTypeMapping TypeName="CSProjDBModel.NVDA">
+              <MappingFragment StoreEntitySet="NVDA">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="Adj_Close" ColumnName="Adj_Close" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetDate" FunctionName="CSProjDBModel.Store.GetDate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CSProjDBModel.GetDate_Result">
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
